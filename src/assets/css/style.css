@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #d8590a;
+  --white-color: #fff;
+  --black-color: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  background-color: var(--white-color);
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+.active {
+  color: var(--primary-color) !important;
+}
+.navbar .badge {
+  transition: transform 0.2s;
+}
+
+.navbar .badge:hover {
+  transform: scale(1.1);
+}
+
+.mySwiper {
+  height: calc(100vh - 83px);
+}
+
+.slide-text {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  color: var(--white-color) !important;
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: 99999;
+}
+
+.slide-text.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Responsive font */
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 2rem;
+  }
+}
+
+.list-unstyled li a:hover{
+  color: var(--primary-color) !important;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  z-index: 999;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px; /* width of the vertical scrollbar */
+  height: 10px; /* height of the horizontal scrollbar */
+}
+
+/* Track (background of scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1b086;
+}
+
+/* Scroll thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* your color */
+  border-radius: 10px; /* rounded edges */
+}
+
+/* Scroll thumb hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cc5200;
+}
